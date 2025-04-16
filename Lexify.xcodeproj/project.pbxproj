@@ -6,17 +6,34 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		560088772DAF876B00F0A7C2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 560088712DAF876B00F0A7C2 /* Preview Assets.xcassets */; };
+		560088782DAF876B00F0A7C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 560088732DAF876B00F0A7C2 /* Assets.xcassets */; };
+		560088792DAF876B00F0A7C2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560088742DAF876B00F0A7C2 /* ContentView.swift */; };
+		5600887A2DAF876B00F0A7C2 /* LexifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560088752DAF876B00F0A7C2 /* LexifyApp.swift */; };
+		560088802DAF891400F0A7C2 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5600887F2DAF891400F0A7C2 /* ListView.swift */; };
+		560088822DAF931500F0A7C2 /* WordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560088812DAF931500F0A7C2 /* WordsView.swift */; };
+		560088842DAF9B2D00F0A7C2 /* LinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560088832DAF9B2D00F0A7C2 /* LinkView.swift */; };
+		560088862DAF9F8700F0A7C2 /* NewWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560088852DAF9F8700F0A7C2 /* NewWordView.swift */; };
+		560088882DAFB05200F0A7C2 /* ListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560088872DAFB05200F0A7C2 /* ListVM.swift */; };
+		5600888A2DAFB0D600F0A7C2 /* ContentVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560088892DAFB0D600F0A7C2 /* ContentVM.swift */; };
+		5600888C2DAFDB5C00F0A7C2 /* NewLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5600888B2DAFDB5C00F0A7C2 /* NewLinkView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		560088602DAF874900F0A7C2 /* Lexify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lexify.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		560088712DAF876B00F0A7C2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		560088732DAF876B00F0A7C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		560088742DAF876B00F0A7C2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		560088752DAF876B00F0A7C2 /* LexifyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexifyApp.swift; sourceTree = "<group>"; };
+		5600887F2DAF891400F0A7C2 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		560088812DAF931500F0A7C2 /* WordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsView.swift; sourceTree = "<group>"; };
+		560088832DAF9B2D00F0A7C2 /* LinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkView.swift; sourceTree = "<group>"; };
+		560088852DAF9F8700F0A7C2 /* NewWordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWordView.swift; sourceTree = "<group>"; };
+		560088872DAFB05200F0A7C2 /* ListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVM.swift; sourceTree = "<group>"; };
+		560088892DAFB0D600F0A7C2 /* ContentVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentVM.swift; sourceTree = "<group>"; };
+		5600888B2DAFDB5C00F0A7C2 /* NewLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLinkView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		560088622DAF874900F0A7C2 /* Lexify */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Lexify;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		5600885D2DAF874900F0A7C2 /* Frameworks */ = {
@@ -32,7 +49,7 @@
 		560088572DAF874900F0A7C2 = {
 			isa = PBXGroup;
 			children = (
-				560088622DAF874900F0A7C2 /* Lexify */,
+				560088762DAF876B00F0A7C2 /* Lexify */,
 				560088612DAF874900F0A7C2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +60,64 @@
 				560088602DAF874900F0A7C2 /* Lexify.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		560088722DAF876B00F0A7C2 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				560088712DAF876B00F0A7C2 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		560088762DAF876B00F0A7C2 /* Lexify */ = {
+			isa = PBXGroup;
+			children = (
+				560088722DAF876B00F0A7C2 /* Preview Content */,
+				5600887E2DAF878D00F0A7C2 /* App */,
+				5600887B2DAF876E00F0A7C2 /* Models */,
+				5600887D2DAF878500F0A7C2 /* ViewModels */,
+				5600887C2DAF877A00F0A7C2 /* Views */,
+			);
+			path = Lexify;
+			sourceTree = "<group>";
+		};
+		5600887B2DAF876E00F0A7C2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5600887C2DAF877A00F0A7C2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				560088742DAF876B00F0A7C2 /* ContentView.swift */,
+				5600887F2DAF891400F0A7C2 /* ListView.swift */,
+				560088812DAF931500F0A7C2 /* WordsView.swift */,
+				560088832DAF9B2D00F0A7C2 /* LinkView.swift */,
+				560088852DAF9F8700F0A7C2 /* NewWordView.swift */,
+				5600888B2DAFDB5C00F0A7C2 /* NewLinkView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5600887D2DAF878500F0A7C2 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				560088872DAFB05200F0A7C2 /* ListVM.swift */,
+				560088892DAFB0D600F0A7C2 /* ContentVM.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		5600887E2DAF878D00F0A7C2 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				560088752DAF876B00F0A7C2 /* LexifyApp.swift */,
+				560088732DAF876B00F0A7C2 /* Assets.xcassets */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +134,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				560088622DAF874900F0A7C2 /* Lexify */,
 			);
 			name = Lexify;
 			packageProductDependencies = (
@@ -109,6 +181,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				560088772DAF876B00F0A7C2 /* Preview Assets.xcassets in Resources */,
+				560088782DAF876B00F0A7C2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +193,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5600888C2DAFDB5C00F0A7C2 /* NewLinkView.swift in Sources */,
+				5600888A2DAFB0D600F0A7C2 /* ContentVM.swift in Sources */,
+				560088822DAF931500F0A7C2 /* WordsView.swift in Sources */,
+				560088882DAFB05200F0A7C2 /* ListVM.swift in Sources */,
+				560088862DAF9F8700F0A7C2 /* NewWordView.swift in Sources */,
+				560088792DAF876B00F0A7C2 /* ContentView.swift in Sources */,
+				5600887A2DAF876B00F0A7C2 /* LexifyApp.swift in Sources */,
+				560088802DAF891400F0A7C2 /* ListView.swift in Sources */,
+				560088842DAF9B2D00F0A7C2 /* LinkView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
