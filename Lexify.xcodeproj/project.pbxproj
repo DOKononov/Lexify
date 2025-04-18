@@ -18,7 +18,26 @@
 		560088882DAFB05200F0A7C2 /* ListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560088872DAFB05200F0A7C2 /* ListVM.swift */; };
 		5600888A2DAFB0D600F0A7C2 /* ContentVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560088892DAFB0D600F0A7C2 /* ContentVM.swift */; };
 		5600888C2DAFDB5C00F0A7C2 /* NewLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5600888B2DAFDB5C00F0A7C2 /* NewLinkView.swift */; };
+		562926EA2DB0D0950073F217 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562926E92DB0D0950073F217 /* Word.swift */; };
+		563290182DB13B2900466BD6 /* NavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563290172DB13B2900466BD6 /* NavigationLink.swift */; };
+		56D8BBFF2DAFEC5F00BA97EE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D8BBFE2DAFEC5F00BA97EE /* Extensions.swift */; };
+		56DCCA3E2DB0E85600B7B0A2 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 56DCCA3D2DB0E85600B7B0A2 /* RealmSwift */; };
+		56DCCA402DB1037E00B7B0A2 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DCCA3F2DB1037E00B7B0A2 /* WebView.swift */; };
+		56DCCA422DB132E700B7B0A2 /* LinkPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DCCA412DB132E700B7B0A2 /* LinkPreview.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		56DCCA352DB0E68600B7B0A2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		560088602DAF874900F0A7C2 /* Lexify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lexify.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,6 +52,11 @@
 		560088872DAFB05200F0A7C2 /* ListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVM.swift; sourceTree = "<group>"; };
 		560088892DAFB0D600F0A7C2 /* ContentVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentVM.swift; sourceTree = "<group>"; };
 		5600888B2DAFDB5C00F0A7C2 /* NewLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLinkView.swift; sourceTree = "<group>"; };
+		562926E92DB0D0950073F217 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		563290172DB13B2900466BD6 /* NavigationLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLink.swift; sourceTree = "<group>"; };
+		56D8BBFE2DAFEC5F00BA97EE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		56DCCA3F2DB1037E00B7B0A2 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		56DCCA412DB132E700B7B0A2 /* LinkPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkPreview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56DCCA3E2DB0E85600B7B0A2 /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +98,7 @@
 		560088762DAF876B00F0A7C2 /* Lexify */ = {
 			isa = PBXGroup;
 			children = (
+				56D8BBFD2DAFEC5200BA97EE /* Extensions */,
 				560088722DAF876B00F0A7C2 /* Preview Content */,
 				5600887E2DAF878D00F0A7C2 /* App */,
 				5600887B2DAF876E00F0A7C2 /* Models */,
@@ -85,6 +111,8 @@
 		5600887B2DAF876E00F0A7C2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				562926E92DB0D0950073F217 /* Word.swift */,
+				563290172DB13B2900466BD6 /* NavigationLink.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -93,11 +121,9 @@
 			isa = PBXGroup;
 			children = (
 				560088742DAF876B00F0A7C2 /* ContentView.swift */,
-				5600887F2DAF891400F0A7C2 /* ListView.swift */,
-				560088812DAF931500F0A7C2 /* WordsView.swift */,
-				560088832DAF9B2D00F0A7C2 /* LinkView.swift */,
-				560088852DAF9F8700F0A7C2 /* NewWordView.swift */,
-				5600888B2DAFDB5C00F0A7C2 /* NewLinkView.swift */,
+				563290DB2DB160AB00466BD6 /* List */,
+				563290DC2DB160B500466BD6 /* Words */,
+				563290DD2DB160C100466BD6 /* Link */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -120,6 +146,42 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		563290DB2DB160AB00466BD6 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				5600887F2DAF891400F0A7C2 /* ListView.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		563290DC2DB160B500466BD6 /* Words */ = {
+			isa = PBXGroup;
+			children = (
+				560088812DAF931500F0A7C2 /* WordsView.swift */,
+				560088852DAF9F8700F0A7C2 /* NewWordView.swift */,
+			);
+			path = Words;
+			sourceTree = "<group>";
+		};
+		563290DD2DB160C100466BD6 /* Link */ = {
+			isa = PBXGroup;
+			children = (
+				560088832DAF9B2D00F0A7C2 /* LinkView.swift */,
+				5600888B2DAFDB5C00F0A7C2 /* NewLinkView.swift */,
+				56DCCA412DB132E700B7B0A2 /* LinkPreview.swift */,
+			);
+			path = Link;
+			sourceTree = "<group>";
+		};
+		56D8BBFD2DAFEC5200BA97EE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				56D8BBFE2DAFEC5F00BA97EE /* Extensions.swift */,
+				56DCCA3F2DB1037E00B7B0A2 /* WebView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -130,6 +192,7 @@
 				5600885C2DAF874900F0A7C2 /* Sources */,
 				5600885D2DAF874900F0A7C2 /* Frameworks */,
 				5600885E2DAF874900F0A7C2 /* Resources */,
+				56DCCA352DB0E68600B7B0A2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -137,6 +200,7 @@
 			);
 			name = Lexify;
 			packageProductDependencies = (
+				56DCCA3D2DB0E85600B7B0A2 /* RealmSwift */,
 			);
 			productName = Lexify;
 			productReference = 560088602DAF874900F0A7C2 /* Lexify.app */;
@@ -166,6 +230,9 @@
 			);
 			mainGroup = 560088572DAF874900F0A7C2;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				56DCCA3C2DB0E85600B7B0A2 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 560088612DAF874900F0A7C2 /* Products */;
 			projectDirPath = "";
@@ -195,11 +262,16 @@
 			files = (
 				5600888C2DAFDB5C00F0A7C2 /* NewLinkView.swift in Sources */,
 				5600888A2DAFB0D600F0A7C2 /* ContentVM.swift in Sources */,
+				56DCCA422DB132E700B7B0A2 /* LinkPreview.swift in Sources */,
 				560088822DAF931500F0A7C2 /* WordsView.swift in Sources */,
 				560088882DAFB05200F0A7C2 /* ListVM.swift in Sources */,
 				560088862DAF9F8700F0A7C2 /* NewWordView.swift in Sources */,
+				56D8BBFF2DAFEC5F00BA97EE /* Extensions.swift in Sources */,
+				562926EA2DB0D0950073F217 /* Word.swift in Sources */,
 				560088792DAF876B00F0A7C2 /* ContentView.swift in Sources */,
+				563290182DB13B2900466BD6 /* NavigationLink.swift in Sources */,
 				5600887A2DAF876B00F0A7C2 /* LexifyApp.swift in Sources */,
+				56DCCA402DB1037E00B7B0A2 /* WebView.swift in Sources */,
 				560088802DAF891400F0A7C2 /* ListView.swift in Sources */,
 				560088842DAF9B2D00F0A7C2 /* LinkView.swift in Sources */,
 			);
@@ -407,6 +479,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		56DCCA3C2DB0E85600B7B0A2 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		56DCCA3D2DB0E85600B7B0A2 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 56DCCA3C2DB0E85600B7B0A2 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 560088582DAF874900F0A7C2 /* Project object */;
 }

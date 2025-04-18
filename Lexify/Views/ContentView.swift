@@ -11,6 +11,11 @@ struct ContentView: View {
     @State private var showNewWord = false
     @State private var showNewLink = false
     
+    init() {
+        UITabBar.appearance().shadowImage = UIImage()
+        UITabBar.appearance().backgroundImage = UIImage()
+        UITabBar.appearance().backgroundColor = .white
+    }
     
     var body: some View {
             TabView {
@@ -24,7 +29,6 @@ struct ContentView: View {
                     LinkView(showNewLink: $showNewLink)
                 }
             }
-            .padding(.horizontal, 16)
 
             .fullScreenCover(isPresented: $showNewWord) {
                 NewWordView(showNewWord: $showNewWord)

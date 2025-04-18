@@ -6,11 +6,14 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct NewLinkView: View {
     @State var title: String = ""
     @State var link: String = ""
     @Binding var showNewLink: Bool
+    @State var showAlert: Bool = false
+    @ObservedResults(WordLink.self) var links
     
     var body: some View {
         VStack {
@@ -41,6 +44,8 @@ struct NewLinkView: View {
                 
                 HStack {
                     TextField("Link", text: $link)
+                        .textInputAutocapitalization(.never)
+                        .autocorrectionDisabled()
                 }
                 .padding(.vertical, 13)
                 .padding(.horizontal, 20)
@@ -51,8 +56,23 @@ struct NewLinkView: View {
             
             Spacer()
             Button {
+                guard
+                    !title.trimmingCharacters(in: .whitespaces).isEmpty,
+                    !link.trimmingCharacters(in: .whitespaces).isEmpty,
+                    let url = URL(string: link.trimmingCharacters(in: .whitespaces)), UIApplication.shared.canOpenURL(url)
+                else {
+                    showAlert.toggle()
+                    return
+                }
+                
+                   
+                let newLink = WordLink()
+                newLink.title = title
+                newLink.linkStr = link
+                
+                $links.append(newLink)
+                
                 showNewLink.toggle()
-                //todo: save
             } label: {
                 Text("Save")
                     .foregroundStyle(.white)
@@ -60,9 +80,9 @@ struct NewLinkView: View {
                     .frame(maxWidth: .infinity)
                     .background(.green)
                     .clipShape(.capsule)
-
             }
         }
+        .alert("Fill in all fields properly", isPresented: $showAlert) { }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .padding(.vertical, 13)
         .padding(.horizontal, 20)

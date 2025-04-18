@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct NewWordView: View {
     
@@ -13,6 +14,8 @@ struct NewWordView: View {
     @State var translate: String = ""
     @State var description: String = ""
     @Binding var showNewWord: Bool
+    @State var showAlert: Bool = false
+    @ObservedResults(Word.self) var wordItems
     
     var body: some View {
         VStack {
@@ -56,9 +59,12 @@ struct NewWordView: View {
                 ZStack {
                     RoundedRectangle(cornerRadius: 10)
                         .fill(Color(uiColor: .systemGray5))
-
-                    CustomTextEditor(text: $description)
+                    
+                    TextEditor(text: $description)
+                        .colorMultiply(Color(uiColor: .systemGray5))
                         .padding(8)
+                        .autocorrectionDisabled()
+                    
                 }
                 .frame(height: 90)
 
@@ -66,8 +72,21 @@ struct NewWordView: View {
             
             Spacer()
             Button {
-                showNewWord.toggle()
-                //todo: save
+                if word.count == 0, translate.count == 0 {
+//                    alert
+                    showAlert.toggle()
+                } else {
+                    let newWord = Word()
+                    newWord.word = word
+                    newWord.translate = translate
+                    newWord.wordDescription = description
+                    $wordItems.append(newWord)
+                    
+                    showNewWord.toggle()
+                    //todo: save
+                }
+                
+
             } label: {
                 Text("Save")
                     .foregroundStyle(.white)
@@ -81,6 +100,7 @@ struct NewWordView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .padding(.vertical, 13)
         .padding(.horizontal, 20)
+        .alert("Empty fields", isPresented: $showAlert) { }
     }
 }
 

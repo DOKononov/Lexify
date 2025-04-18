@@ -6,23 +6,30 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct LinkView: View {
     @Binding var showNewLink: Bool
+    @ObservedResults(WordLink.self) var links
+    @State private var selectedLink: WordLink?
     
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .trailing, vertical: .bottom)) {
             VStack {
-                ScrollView {
-                    LinkItem()
-                        .padding(.bottom, 10)
-                    LinkItem()
-                        .padding(.bottom, 10)
-                    LinkItem()
-                        .padding(.bottom, 10)
+                ForEach(links, id: \.id) { link in
                     
+                    LinkItem(link: link) {
+                        withAnimation {
+                            $links.remove(link)
+                        }
+                    } open: {
+                        selectedLink = link
+                    }
                 }
-            }.padding(.top, 16)
+                Spacer()
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .padding(16)
             
             Button {
                 //action
@@ -41,6 +48,10 @@ struct LinkView: View {
             }
             .offset(x: -20, y: -30)
         }
+
+        .fullScreenCover(item: $selectedLink) { link in
+            LinkPreview(link: link)
+        }
     }
 }
 
@@ -50,16 +61,19 @@ struct LinkView: View {
 
 
 struct LinkItem: View {
+    @State var link: WordLink
+    @State var delete: (() -> Void)
+    @State var open: (() -> Void)
     var body: some View {
         HStack {
             HStack(spacing: 15) {
                 Image(systemName: "link")
-                Text("LinkItem LinkItem LinkItem")
+                Text(link.title)
                     .font(.system(size: 14))
             }
             Spacer()
             Button {
-                
+                delete()
             } label: {
                 Image(systemName: "xmark")
                     .foregroundStyle(.black)
@@ -69,7 +83,7 @@ struct LinkItem: View {
         .background(Color(UIColor.systemGray5))
         .clipShape(RoundedRectangle(cornerRadius: 10))
         .onTapGesture {
-            //tap
+            open()
         }
     }
 }
